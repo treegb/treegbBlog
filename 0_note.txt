@@ -1,0 +1,7 @@
+.How do I push to git:
+..Always stay in { master } branch, you don't need to { checkout } to gh-pages manually!
+..To push to { master } branch, you simply do { git push origin }. This will keep all your { .md } files backup to github
+(since html file inside { public } directory (created by { hexo generate }) is useless for you to edit the content).
+..To push to { gh-pages } branch, you don't need to { checkout } then { push }! Because { Hexo } can do this automatically for you.
+After you had set up everything in { hexo }, you simply use { hexo generate } follow by { hexo deploy }
+then { Hexo } will push those files under { public } to { gh-pages } branch.
