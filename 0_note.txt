@@ -5,3 +5,4 @@
 ..To push to { gh-pages } branch, you don't need to { checkout } then { push }! Because { Hexo } can do this automatically for you.
 After you had set up everything in { hexo }, you simply use { hexo generate } follow by { hexo deploy }
 then { Hexo } will push those files under { public } to { gh-pages } branch.
+..The backup [ of ]**[ to ] { master } branch and deploy [ of ]**[ to ] { gh-pages} branch can work separately. For example, you don't have to backup to { master } branch so often, do it once a week, while deploy to { gh-pages} branch daily.
