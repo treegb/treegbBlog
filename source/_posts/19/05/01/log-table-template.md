@@ -11,23 +11,27 @@ date: 2019-05-01 13:07:07
 <!-- more -->
 <hr>
 
-<h2>List</h2>
-<ol>
-  <li><strong>2019-05:</strong> <a href="#190501m131032">Section</a>.</li>
-  <li><strong>2019-05-01:</strong> <a href="#190501m131037">Section</a>.</li>
-</ol>
-<h2>2019-05<a id="190501m131032"></a></h2>
-<div class="imgBlock">
-  <img src="/treegbBlog/fs/m/19/05/01/190501m124856/2019-05.svg" alt="2019-05">
+<div class="h2">
+  <h2>List</h2>
+  <ol>
+    <li><strong>2019-05:</strong> <a href="#190501m131032">Section</a>.</li>
+    <li><strong>2019-05-01:</strong> <a href="#190501m131037">Section</a>.</li>
+  </ol>
+  <h2>2019-05<a id="190501m131032"></a></h2>
+  <div class="imgBlock">
+    <img src="/treegbBlog/fs/m/19/05/01/190501m124856/2019-05.svg" alt="2019-05">
+  </div>
 </div>
 
-<h2>2019-05-01<a id="190501m131037"></a></h2>
-<div class="imgBlock">
-  <img src="/treegbBlog/fs/m/19/05/01/190501m124856/2019-05-01.svg" alt="2019-05-01">
+<div class="h2">
+  <h2>2019-05-01<a id="190501m131037"></a></h2>
+  <div class="imgBlock">
+    <img src="/treegbBlog/fs/m/19/05/01/190501m124856/2019-05-01.svg" alt="2019-05-01">
+  </div>
+  <ol>
+    <li><strong>:</strong> .</li>
+  </ol>
 </div>
-<ol>
-  <li><strong>:</strong> .</li>
-</ol>
 
 <hr>
 
