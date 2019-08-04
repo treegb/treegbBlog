@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="treegb&#39;s blog">
 <meta property="og:description" content="Short: -">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-04T03:55:32.513Z">
+<meta property="og:updated_time" content="2019-08-04T04:30:58.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190803 ( Log table ) 2019-08">
 <meta name="twitter:description" content="Short: -">
@@ -416,7 +416,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-04 11:55:32" itemprop="dateModified" datetime="2019-08-04T11:55:32+08:00">2019-08-04</time>
+                <time title="Modified: 2019-08-04 12:30:58" itemprop="dateModified" datetime="2019-08-04T12:30:58+08:00">2019-08-04</time>
               
             
           </span>
@@ -528,8 +528,15 @@
     <div class="itm s1">{ git }</div>
   </div>
   <ol>
-    <li><strong>How to avoid typing username & password when using HTTPS Authentication:</strong> <a href="https://medium.com/@isaacjumba/git-how-to-avoid-typing-username-password-when-using-https-authentication-f22bb259dfc7" target="_blank" rel="noopener">Link</a>. Related to <code>credential.helper</code>.</li>
-    <li><strong>Git push (in https) results in "Authentication Failed:</strong> <a href="https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-failed" target="_blank" rel="noopener">Link</a>. Conclusion: If you enabled two-factor authentication in your Github account you won't be able to push via HTTPS using your accounts password. Instead you need to generate and use a personal access token. // And the first time (?) you have to clone with <code>git clone 'https://treegb:myVeryLongPersonalAccessToken@github.com/tsengwoody/LoveAndHappiness-frontend.git'</code>, and I think this stores into <strong><code>credential.helper</code></strong>, youh can use <strong><code>git config --global --unset credential.helper</code></strong> as article to remove it, I think.</li>
+    <li><strong>( Git) How to avoid typing username & password when using HTTPS Authentication:</strong> <a href="https://medium.com/@isaacjumba/git-how-to-avoid-typing-username-password-when-using-https-authentication-f22bb259dfc7" target="_blank" rel="noopener">Link</a>. Related to <code>credential.helper</code>.</li>
+    <li><strong>( Git) Push (in https) results in "Authentication Failed:</strong>
+      <ol>
+        <li><strong>Push (in https) results in "Authentication Failed:</strong> <a href="https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-failed" target="_blank" rel="noopener">Link</a>.</li>
+        <li><strong>Two-factor authentication:</strong> If you enabled two-factor authentication in your Github account you won't be able to push via HTTPS using your accounts password. Instead you need to generate and use a personal access token, and clone and push like this: <code>git clone 'https://treegb:myVeryLongPersonalAccessToken@github.com/fooUser/fooProject.git'</code>. If you don't put the <code>:myVeryLongPersonalAccessToken</code> there, it willl prompt you later.</li>
+        <li><strong>{ credential.helper store }:</strong> This is related to <code>git config --global credential.helper store</code> and <code>~/.git-credentials</code> (see <code>git help -a | grep 'credential'</code>, and <code>git help credential-store</code>). // If you newlly installed git, then you set <code>git config --global credential.helper cache</code>, the first time you tried to clone with <code>git clone 'https://@github.com/fooUser/fooProject.git'</code>, it will prompt you to enter your user name and password (credentials), those credentials will last only 5 minutes before you have to retype them. // If you newlly installed ... <code>git config --global credential.helper store</code> ... will last forever and it will store it under <code>~/.git-credentials</code> in default, if you didn't specify the path.</li>
+        <li><strong>git using wrong credential when pushing:</strong> Ok, now I have <code>git config --global credential.helper store</code> set, and my <code>~/.git-credentials</code> have 2 credentials inside (2 user acount, 2 password). Now when I push, for some unknown reason git pick the wrong one, causing error thrown on cmd. // To solve this issue, you do this: explicit add the correct user name at the front of url, like this: <code>git remote remove origin</code>, <code>git remote add origin https://treegb:myVeryLongPersonalAccessToken@github.com/fooUser/fooProject.git'</code>. Now you use <code>git push origin</code>, the credential will forced to use <code>treegb</code> (and the password stored in <code>~/.git-credentials</code>). // For hexo, you have to write it under <code>_config.yml</code> ,, deploy ,, repo.</li>
+      </ol>
+    </li>
     <li><strong>By time:</strong>
       <ol>
         <li><strong>07:45 Wake up.</strong></li>
